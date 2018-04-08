@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-// const chalk = require('chalk')
 const pckg = require('./../package.json')
 const program = require('commander')
 
@@ -25,10 +24,10 @@ program
   })
 
 program
-  .command('list [notebook] [index]')
+  .command('list [notebook]')
   .alias('ls')
-  .description('List the notes for a given notebook. Show the note at the given index.')
-  .action((notebook, index) => {
+  .description('List the notes for a given notebook. Lists all notebooks.')
+  .action(notebook => {
     if (!notebook) {
       list.listNotebooks()
     } else {

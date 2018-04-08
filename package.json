@@ -7,9 +7,11 @@
     "jin": "./bin/jin.js"
   },
   "keywords": [
-    "CLI",
+    "cli",
     "terminal",
-    "notes"
+    "terminal-app",
+    "notes",
+    "note-taking"
   ],
   "author": "Christopher Murphy",
   "license": "MIT",
