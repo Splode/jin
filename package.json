@@ -1,0 +1,29 @@
+{
+  "name": "jin",
+  "version": "0.0.1",
+  "description": "A CLI app for taking simple notes without ever leaving the terminal.",
+  "scripts": {},
+  "bin": {
+    "jin": "./bin/jin.js"
+  },
+  "keywords": [
+    "CLI",
+    "terminal",
+    "notes"
+  ],
+  "author": "Christopher Murphy",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "commander": "^2.15.1",
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}
