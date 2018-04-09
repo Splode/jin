@@ -1,4 +1,4 @@
-![Jin screenshot](./.github/jin-screenshot.png)
+![Jin screenshot](./.github/jin-ss.png)
 
 <h1 align="center">jin</h1>
 
