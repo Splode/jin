@@ -5,7 +5,7 @@
 ## Installation
 
 ```bash
-$ npm i -g jin-app
+$ npm install --global jin-app
 ```
 
 ## Usage
