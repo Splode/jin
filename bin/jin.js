@@ -5,6 +5,7 @@ const program = require('commander')
 
 const add = require('./../lib/add')
 const list = require('./../lib/list')
+const destroy = require('./../lib/destroy')
 
 program.version(pckg.version, '-v, --version')
 program.usage('<command> [notebook] [note]')
@@ -32,6 +33,19 @@ program
       list.listNotebooks()
     } else {
       list.listNotes(notebook)
+    }
+  })
+
+program
+  .command('remove <notebook> [index]')
+  .alias('rm')
+  .option('-f, --force', 'Force delete notebook non-empty notebook.')
+  .description('Permanently delete a note from the specified notebook. Permanently delete the specified notebook.')
+  .action((notebook, index, cmd) => {
+    if (!index) {
+      destroy.removeNoteboook(notebook, cmd.force)
+    } else {
+      destroy.removeNote(notebook, index)
     }
   })
 
