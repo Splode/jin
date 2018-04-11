@@ -28,14 +28,21 @@ $ npm install --global jin-app
 ### Add Notes
 
 ```bash
+# Add a new note to an existing notebook.
+# If the notebook does not exist, it will be created.
+
 $ jin add [notebook] <note>
 # jin a [notebook] <note>
 ```
 
 ```bash
+# Create a new, empty notebook.
+
 $ jin add [notebook]
 # jin a [notebook]
 ```
+
+> Note: a notebook name is required.
 
 #### Example
 
@@ -48,11 +55,15 @@ Added "Use 'util.promisify()' to promisify a callback-style function." to "nodej
 ### List Notes
 
 ```bash
+# List all notes in the given notebook.
+
 $ jin list [notebook]
 # jin ls [notebook]
 ```
 
 ```bash
+# List all notebooks.
+
 $ jin list
 # jin ls
 ```
@@ -64,7 +75,7 @@ $ jin list nodejs
 
 nodejs
 ----------------
-0 Use 'os.homedir()' to access the home directory
+0 Use 'os.homedir()' to access the home directory.
 1 Use 'util.promisify()' to promisify a callback-style function.
 ```
 
@@ -75,16 +86,22 @@ WIP
 ### Remove Notes
 
 ```bash
+# Remove a note at the given index from the given notebook.
+
 $ jin remove [notebook] <index>
 # jin rm [notebook] <index>
 ```
 
 ```bash
+# Remove a given notebook.
+
 $ jin remove [notebook]
 # jin rm [notebook]
 ```
 
-#### Example
+> Note: You must pass in the `--force` flag when attempting to remove a notebook that contains notes.
+
+#### Examples
 
 ```bash
 $ jin remove nodejs 0
@@ -108,8 +125,24 @@ WIP
 
 ### Help
 
+```bash
+# Display general help output.
+
+$ jin --help
+# jin -h
+```
+
+```bash
+# Display command-specific help output.
+
+$ jin [cmd] --help
+```
+
 ## Related Projects
 
-## Licence
+- [Dnote](https://github.com/dnote-io/cli)
+- [Idea](https://github.com/IonicaBizau/idea)
+
+## License
 
 MIT &copy; [Christopher Murphy](https://github.com/splode)
