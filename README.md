@@ -28,14 +28,21 @@ $ npm install --global jin-app
 ### Add Notes
 
 ```bash
+# Add a new note to an existing notebook.
+# If the notebook does not exist, it will be created.
+
 $ jin add [notebook] <note>
 # jin a [notebook] <note>
 ```
 
 ```bash
+# Create a new, empty notebook.
+
 $ jin add [notebook]
 # jin a [notebook]
 ```
+
+> Note: a notebook name is required.
 
 #### Example
 
@@ -48,11 +55,15 @@ Added "Use 'util.promisify()' to promisify a callback-style function." to "nodej
 ### List Notes
 
 ```bash
+# List all notes in the given notebook.
+
 $ jin list [notebook]
 # jin ls [notebook]
 ```
 
 ```bash
+# List all notebooks.
+
 $ jin list
 # jin ls
 ```
@@ -75,14 +86,20 @@ WIP
 ### Remove Notes
 
 ```bash
+# Remove a note at the given index from the given notebook.
+
 $ jin remove [notebook] <index>
 # jin rm [notebook] <index>
 ```
 
 ```bash
+# Remove a given notebook.
+
 $ jin remove [notebook]
 # jin rm [notebook]
 ```
+
+> Note: You must pass in the `--force` flag when attempting to remove a notebook that contains notes.
 
 #### Examples
 
@@ -109,12 +126,16 @@ WIP
 ### Help
 
 ```bash
+# Display general help output.
+
 $ jin --help
 # jin -h
 ```
 
 ```bash
-$ jin remove --help
+# Display command-specific help output.
+
+$ jin [cmd] --help
 ```
 
 ## Related Projects
