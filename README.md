@@ -64,7 +64,7 @@ $ jin list nodejs
 
 nodejs
 ----------------
-0 Use 'os.homedir()' to access the home directory
+0 Use 'os.homedir()' to access the home directory.
 1 Use 'util.promisify()' to promisify a callback-style function.
 ```
 
@@ -84,7 +84,7 @@ $ jin remove [notebook]
 # jin rm [notebook]
 ```
 
-#### Example
+#### Examples
 
 ```bash
 $ jin remove nodejs 0
@@ -108,8 +108,20 @@ WIP
 
 ### Help
 
+```bash
+$ jin --help
+# jin -h
+```
+
+```bash
+$ jin remove --help
+```
+
 ## Related Projects
 
-## Licence
+- [Dnote](https://github.com/dnote-io/cli)
+- [Idea](https://github.com/IonicaBizau/idea)
+
+## License
 
 MIT &copy; [Christopher Murphy](https://github.com/splode)
