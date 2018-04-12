@@ -46,7 +46,7 @@ $ jin add [notebook]
 
 #### Example
 
-```bash
+```console
 $ jin add nodejs "Use 'util.promisify()' to promisify a callback-style function."
 
 Added "Use 'util.promisify()' to promisify a callback-style function." to "nodejs".
@@ -140,8 +140,8 @@ $ jin [cmd] --help
 
 ## Related Projects
 
-- [Dnote](https://github.com/dnote-io/cli)
-- [Idea](https://github.com/IonicaBizau/idea)
+* [Dnote](https://github.com/dnote-io/cli)
+* [Idea](https://github.com/IonicaBizau/idea)
 
 ## License
 
