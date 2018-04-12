@@ -70,7 +70,7 @@ $ jin list
 
 #### Example
 
-```bash
+```console
 $ jin list nodejs
 
 nodejs
@@ -103,13 +103,13 @@ $ jin remove [notebook]
 
 #### Examples
 
-```bash
+```console
 $ jin remove nodejs 0
 
 Removed note at index 0 from nodejs notebook.
 ```
 
-```bash
+```console
 $ jin rm --force nodejs
 
 Removed nodejs notebook.
