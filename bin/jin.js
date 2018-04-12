@@ -6,6 +6,7 @@ const program = require('commander')
 const add = require('./../lib/add')
 const list = require('./../lib/list')
 const destroy = require('./../lib/destroy')
+const edit = require('./../lib/edit')
 
 program.version(pckg.version, '-v, --version')
 program.usage('<command> [notebook] [note]')
@@ -34,6 +35,14 @@ program
     } else {
       list.listNotes(notebook)
     }
+  })
+
+program
+  .command('edit <notebook> <index>')
+  .alias('ed')
+  .description('Edit the note at the given index of a notebook.')
+  .action((notebook, index) => {
+    edit.editNote(notebook, index)
   })
 
 program
