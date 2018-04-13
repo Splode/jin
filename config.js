@@ -1,8 +1,11 @@
 const path = require('path')
 const os = require('os')
 
-const dataPath = path.resolve(os.homedir(), 'jin.json')
+const fileName = 'jin.json'
+const dataPath = path.resolve(os.homedir(), fileName)
+const exportPath = path.resolve(process.cwd(), fileName)
 
 module.exports = {
-  dataPath
+  dataPath,
+  exportPath
 }

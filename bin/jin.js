@@ -8,6 +8,7 @@ const add = require('./../lib/add')
 const list = require('./../lib/list')
 const destroy = require('./../lib/destroy')
 const edit = require('./../lib/edit')
+const exp = require('./../lib/export')
 
 program.version(pckg.version, '-v, --version')
 program.usage('<command> [notebook] [note]')
@@ -47,6 +48,15 @@ program
   .action((notebook, index) => {
     check()
     edit.editNote(notebook, index)
+  })
+
+program
+  .command('export')
+  .alias('exp')
+  .description('Export a copy of the notebook collection to the current directory.')
+  .action(() => {
+    check()
+    exp()
   })
 
 program
