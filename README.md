@@ -1,4 +1,4 @@
-![Jin screenshot](./.github/jin-ss.png)
+![Jin screenshot](https://github.com/Splode/jin/raw/master/.github/jin-ss.png)
 
 <h1 align="center">jin</h1>
 
@@ -46,7 +46,7 @@ $ jin add [notebook]
 
 #### Example
 
-```bash
+```console
 $ jin add nodejs "Use 'util.promisify()' to promisify a callback-style function."
 
 Added "Use 'util.promisify()' to promisify a callback-style function." to "nodejs".
@@ -70,7 +70,7 @@ $ jin list
 
 #### Example
 
-```bash
+```console
 $ jin list nodejs
 
 nodejs
@@ -81,12 +81,17 @@ nodejs
 
 ### Edit Notes
 
-WIP
+```bash
+# Edit the contents of a note at the given index of a given notebook.
+
+$ jin edit <notebook> <index>
+# jin ed <notebook> <index>
+```
 
 ### Remove Notes
 
 ```bash
-# Remove a note at the given index from the given notebook.
+# Remove a note at the given index of a given notebook.
 
 $ jin remove [notebook] <index>
 # jin rm [notebook] <index>
@@ -103,13 +108,13 @@ $ jin remove [notebook]
 
 #### Examples
 
-```bash
+```console
 $ jin remove nodejs 0
 
 Removed note at index 0 from nodejs notebook.
 ```
 
-```bash
+```console
 $ jin rm --force nodejs
 
 Removed nodejs notebook.
@@ -140,8 +145,8 @@ $ jin [cmd] --help
 
 ## Related Projects
 
-- [Dnote](https://github.com/dnote-io/cli)
-- [Idea](https://github.com/IonicaBizau/idea)
+* [Dnote](https://github.com/dnote-io/cli)
+* [Idea](https://github.com/IonicaBizau/idea)
 
 ## License
 

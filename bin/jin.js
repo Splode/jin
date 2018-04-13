@@ -3,9 +3,11 @@
 const pckg = require('./../package.json')
 const program = require('commander')
 
+const check = require('./../lib/check')
 const add = require('./../lib/add')
 const list = require('./../lib/list')
 const destroy = require('./../lib/destroy')
+const edit = require('./../lib/edit')
 
 program.version(pckg.version, '-v, --version')
 program.usage('<command> [notebook] [note]')
@@ -17,6 +19,7 @@ program
     'Add a new note to a notebook. Creates the specified notebook if it does not already exist.'
   )
   .action((notebook, note) => {
+    check()
     if (!note) {
       add.createNotebook(notebook)
     } else {
@@ -29,11 +32,21 @@ program
   .alias('ls')
   .description('List the notes for a given notebook. Lists all notebooks.')
   .action(notebook => {
+    check()
     if (!notebook) {
       list.listNotebooks()
     } else {
       list.listNotes(notebook)
     }
+  })
+
+program
+  .command('edit <notebook> <index>')
+  .alias('ed')
+  .description('Edit the note at the given index of a notebook.')
+  .action((notebook, index) => {
+    check()
+    edit.editNote(notebook, index)
   })
 
 program
