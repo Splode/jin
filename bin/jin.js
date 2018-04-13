@@ -3,6 +3,7 @@
 const pckg = require('./../package.json')
 const program = require('commander')
 
+const check = require('./../lib/check')
 const add = require('./../lib/add')
 const list = require('./../lib/list')
 const destroy = require('./../lib/destroy')
@@ -42,6 +43,7 @@ program
   .alias('ed')
   .description('Edit the note at the given index of a notebook.')
   .action((notebook, index) => {
+    check()
     edit.editNote(notebook, index)
   })
 
