@@ -19,6 +19,7 @@ program
     'Add a new note to a notebook. Creates the specified notebook if it does not already exist.'
   )
   .action((notebook, note) => {
+    check()
     if (!note) {
       add.createNotebook(notebook)
     } else {
@@ -31,6 +32,7 @@ program
   .alias('ls')
   .description('List the notes for a given notebook. Lists all notebooks.')
   .action(notebook => {
+    check()
     if (!notebook) {
       list.listNotebooks()
     } else {
