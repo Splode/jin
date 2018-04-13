@@ -20,6 +20,7 @@ $ npm install --global jin-app
 
 * [`add`](#add-notes)
 * [`list`](#list-notes)
+* [`edit`](#edit-notes)
 * [`remove`](#remove-notes)
 * [`backup`](#backup)
 * [`export`](#export)
