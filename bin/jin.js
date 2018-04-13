@@ -29,19 +29,6 @@ program
   })
 
 program
-  .command('list [notebook]')
-  .alias('ls')
-  .description('List the notes for a given notebook. Lists all notebooks.')
-  .action(notebook => {
-    check()
-    if (!notebook) {
-      list.listNotebooks()
-    } else {
-      list.listNotes(notebook)
-    }
-  })
-
-program
   .command('edit <notebook> <index>')
   .alias('ed')
   .description('Edit the note at the given index of a notebook.')
@@ -57,6 +44,19 @@ program
   .action(() => {
     check()
     exp()
+  })
+
+program
+  .command('list [notebook]')
+  .alias('ls')
+  .description('List the notes for a given notebook. Lists all notebooks.')
+  .action(notebook => {
+    check()
+    if (!notebook) {
+      list.listNotebooks()
+    } else {
+      list.listNotes(notebook)
+    }
   })
 
 program
