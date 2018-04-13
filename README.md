@@ -1,4 +1,4 @@
-![Jin screenshot](./.github/jin-ss.png)
+![Jin screenshot](https://github.com/Splode/jin/raw/master/.github/jin-ss.png)
 
 <h1 align="center">jin</h1>
 
@@ -81,12 +81,17 @@ nodejs
 
 ### Edit Notes
 
-WIP
+```bash
+# Edit the contents of a note at the given index of a given notebook.
+
+$ jin edit <notebook> <index>
+# jin ed <notebook> <index>
+```
 
 ### Remove Notes
 
 ```bash
-# Remove a note at the given index from the given notebook.
+# Remove a note at the given index of a given notebook.
 
 $ jin remove [notebook] <index>
 # jin rm [notebook] <index>
