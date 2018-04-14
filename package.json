@@ -2,7 +2,9 @@
   "name": "jin-app",
   "version": "0.0.5",
   "description": "A CLI app for taking simple notes without ever leaving the terminal.",
-  "scripts": {},
+  "scripts": {
+    "test": "jest"
+  },
   "bin": {
     "jin": "./bin/jin.js"
   },
@@ -28,6 +30,8 @@
     "eslint-plugin-import": "^2.10.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-standard": "^3.0.1"
+    "eslint-plugin-standard": "^3.0.1",
+    "execa": "^0.10.0",
+    "jest": "^22.4.3"
   }
 }

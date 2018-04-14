@@ -22,9 +22,9 @@ $ npm install --global jin-app
 * [`list`](#list-notes)
 * [`edit`](#edit-notes)
 * [`remove`](#remove-notes)
-* [`backup`](#backup)
 * [`export`](#export)
 * [`help`](#help)
+<!-- * [`backup`](#backup) -->
 
 ### Add Notes
 
@@ -121,13 +121,20 @@ $ jin rm --force nodejs
 Removed nodejs notebook.
 ```
 
-### Backup
+<!-- ### Backup -->
 
-WIP
+<!-- WIP -->
 
 ### Export
 
-WIP
+```bash
+# Create an exports of the notes collection in the current directory.
+
+$ jin export
+# jin exp
+```
+
+> The notes collection is stored in the user's home directory by default.
 
 ### Help
 
