@@ -2,8 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const write = require('./../lib/utils/write')
 const read = require('./../lib/utils/read')
-
-const dataPath = path.resolve(process.cwd(), '__tests__', 'test.json')
+const { dataPath } = require('./../config')
 
 afterAll(() => {
   fs.unlinkSync(dataPath)
