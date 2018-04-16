@@ -1,4 +1,3 @@
-const fs = require('fs')
 const _ = require('lodash')
 const execa = require('execa')
 const read = require('./../lib/utils/read')
@@ -12,7 +11,7 @@ describe('add actions', () => {
       .then(result => result)
     const collection = read(dataPath)
     const notebook = _.find(collection.notebooks, ['name', 'foobar'])
-    expect(result).toBe('\nCreated new notebook foobar.')
+    expect(result).toBe('\n   ✔ Created new notebook foobar.\n')
     expect(notebook.name).toBe('foobar')
   })
   
@@ -22,7 +21,7 @@ describe('add actions', () => {
       .then(result => result)
     const collection = read(dataPath)
     const notebook = _.find(collection.notebooks, ['name', 'foobar'])
-    expect(result).toBe('\nAdded foo to foobar.')
+    expect(result).toBe('\n   ✔ Added foo to foobar.\n')
     expect(notebook.notes[0].note).toBe('foo')
   })
 })

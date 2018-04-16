@@ -1,6 +1,6 @@
 {
   "name": "jin-app",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A CLI app for taking simple notes without ever leaving the terminal.",
   "scripts": {
     "test": "cross-env NODE_ENV=test jest"
