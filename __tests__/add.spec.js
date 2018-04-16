@@ -6,10 +6,6 @@ const { dataPath } = require('./../config')
 
 
 describe('add actions', () => {
-  afterAll(() => {
-    fs.unlinkSync(dataPath)
-  })
-
   test('createNotebook should add a notebook by name', async () => {
     const result = await execa
       .stdout('bin/jin.js', ['add', 'foobar'])

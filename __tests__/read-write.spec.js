@@ -4,11 +4,11 @@ const write = require('./../lib/utils/write')
 const read = require('./../lib/utils/read')
 const { dataPath } = require('./../config')
 
-describe('read and write utilities', () => {
-  afterAll(() => {
-    fs.unlinkSync(dataPath)
-  })
+afterAll(() => {
+  fs.unlinkSync(dataPath)
+})
 
+describe('read and write utilities', () => {
   test('writes "bar"', () => {
     const data = {
       foo: 'bar'
