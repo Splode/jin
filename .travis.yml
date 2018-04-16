@@ -3,8 +3,10 @@ sudo: required
 language: node_js
 node_js:
   - 'lts/*'
+before_script:
+  - chmod u+x bin/jin.js
 script:
-  - sudo $(which npm) test
+  - npm test
 branches:
   only:
     - master
