@@ -22,7 +22,7 @@ Jin allows you to take and organize simple notes without ever leaving the comman
 $ npm install --global jin-app
 ```
 
-## 📝 Usage
+## Usage
 
 ### Commands
 
@@ -34,7 +34,7 @@ $ npm install --global jin-app
 * [`help`](#help)
 <!-- * [`backup`](#backup) -->
 
-### ➕ Add Notes
+### Add Note
 
 ```bash
 # Add a new note to an existing notebook.
@@ -61,7 +61,7 @@ $ jin add nodejs "Use 'util.promisify()' to promisify a callback-style function.
     ✔ Added "Use 'util.promisify()' to promisify a callback-style function." to "nodejs".
 ```
 
-### 📃 List Notes
+### List Notes
 
 ```bash
 # List all notes in the given notebook.
@@ -88,7 +88,7 @@ $ jin list nodejs
     1   Use 'util.promisify()' to promisify a callback-style function.
 ```
 
-### ✏ Edit Notes
+### Edit Note
 
 ```bash
 # Edit the contents of a note at the given index of a given notebook.
@@ -97,7 +97,7 @@ $ jin edit <notebook> <index>
 # jin ed <notebook> <index>
 ```
 
-### ➖ Remove Notes
+### Remove Note
 
 ```bash
 # Remove a note at the given index of a given notebook.
@@ -133,7 +133,7 @@ $ jin rm --force nodejs
 
 <!-- WIP -->
 
-### 📦 Export
+### Export Notes
 
 ```bash
 # Create an exports of the notes collection in the current directory.
@@ -144,7 +144,7 @@ $ jin export
 
 > The notes collection is stored in the user's home directory by default.
 
-### ❔ Help
+### Help
 
 ```bash
 # Display general help output.
