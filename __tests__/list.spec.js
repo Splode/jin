@@ -3,7 +3,7 @@ const execa = require('execa')
 
 describe('list actions', () => {
   beforeAll(() => {
-    execa('bin/jin.js', ['add', 'list-foo', 'bar'])
+    return execa('bin/jin.js', ['add', 'list-foo', 'bar']).then(result => result)
   })
 
   test('list returns a list of notebooks', async () => {
