@@ -3,7 +3,7 @@
   "version": "0.0.6",
   "description": "A CLI app for taking simple notes without ever leaving the terminal.",
   "scripts": {
-    "test": "jest"
+    "test": "cross-env NODE_ENV=test jest"
   },
   "bin": {
     "jin": "./bin/jin.js"
@@ -25,6 +25,7 @@
     "prompts": "^0.1.8"
   },
   "devDependencies": {
+    "cross-env": "^5.1.4",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.10.0",
