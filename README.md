@@ -26,11 +26,11 @@ $ npm install --global jin-app
 
 ### Commands
 
-* [`add`](#add-notes)
+* [`add`](#add-note)
 * [`list`](#list-notes)
-* [`edit`](#edit-notes)
-* [`remove`](#remove-notes)
-* [`export`](#export)
+* [`edit`](#edit-note)
+* [`remove`](#remove-note)
+* [`export`](#export-notes)
 * [`help`](#help)
 <!-- * [`backup`](#backup) -->
 
