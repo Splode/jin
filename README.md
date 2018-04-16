@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./.github/jin-icon--color.png" height="150"/>
+    <img src="https://github.com/Splode/jin/raw/master/.github/jin-icon--color.png" height="150"/>
 </p>
 
 # jin
