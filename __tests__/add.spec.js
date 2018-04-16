@@ -11,7 +11,7 @@ describe('add actions', () => {
       .then(result => result)
     const collection = read(dataPath)
     const notebook = _.find(collection.notebooks, ['name', 'foobar'])
-    expect(result).toBe('\n   ✔ Created new notebook foobar.')
+    expect(result).toBe('\n   ✔ Created new notebook foobar.\n')
     expect(notebook.name).toBe('foobar')
   })
   
@@ -21,7 +21,7 @@ describe('add actions', () => {
       .then(result => result)
     const collection = read(dataPath)
     const notebook = _.find(collection.notebooks, ['name', 'foobar'])
-    expect(result).toBe('\n   ✔ Added foo to foobar.')
+    expect(result).toBe('\n   ✔ Added foo to foobar.\n')
     expect(notebook.notes[0].note).toBe('foo')
   })
 })

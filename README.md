@@ -1,12 +1,20 @@
 ![Jin screenshot](https://github.com/Splode/jin/raw/master/.github/jin-ss.png)
 
-<h1 align="center">jin</h1>
+# jin
 
-<p align="center"><em>A CLI app for taking simple notes without ever leaving the terminal.</em></p>
+*A CLI app for taking simple notes without ever leaving the terminal.*
 
 ## Overview
 
 Jin allows you to take and organize simple notes without ever leaving the command line. Capture ideas, track tasks, and reference code snippets with straightforward and intuitive commands.
+
+## Table of contents
+
+* [Overview](#overview)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Related](#related-projects)
+* [License](#license)
 
 ## Installation
 
@@ -14,7 +22,7 @@ Jin allows you to take and organize simple notes without ever leaving the comman
 $ npm install --global jin-app
 ```
 
-## Usage
+## 📝 Usage
 
 ### Commands
 
@@ -26,7 +34,7 @@ $ npm install --global jin-app
 * [`help`](#help)
 <!-- * [`backup`](#backup) -->
 
-### Add Notes
+### ➕ Add Notes
 
 ```bash
 # Add a new note to an existing notebook.
@@ -50,10 +58,10 @@ $ jin add [notebook]
 ```console
 $ jin add nodejs "Use 'util.promisify()' to promisify a callback-style function."
 
-Added "Use 'util.promisify()' to promisify a callback-style function." to "nodejs".
+    ✔ Added "Use 'util.promisify()' to promisify a callback-style function." to "nodejs".
 ```
 
-### List Notes
+### 📃 List Notes
 
 ```bash
 # List all notes in the given notebook.
@@ -74,13 +82,13 @@ $ jin list
 ```console
 $ jin list nodejs
 
-nodejs
-----------------
-0 Use 'os.homedir()' to access the home directory.
-1 Use 'util.promisify()' to promisify a callback-style function.
+    nodejs Notes
+    ----------------
+    0   Use 'os.homedir()' to access the home directory.
+    1   Use 'util.promisify()' to promisify a callback-style function.
 ```
 
-### Edit Notes
+### ✏ Edit Notes
 
 ```bash
 # Edit the contents of a note at the given index of a given notebook.
@@ -89,7 +97,7 @@ $ jin edit <notebook> <index>
 # jin ed <notebook> <index>
 ```
 
-### Remove Notes
+### ➖ Remove Notes
 
 ```bash
 # Remove a note at the given index of a given notebook.
@@ -112,20 +120,20 @@ $ jin remove [notebook]
 ```console
 $ jin remove nodejs 0
 
-Removed note at index 0 from nodejs notebook.
+    ✔ Removed note at index 0 from nodejs notebook.
 ```
 
 ```console
 $ jin rm --force nodejs
 
-Removed nodejs notebook.
+    ✔ Removed nodejs notebook.
 ```
 
 <!-- ### Backup -->
 
 <!-- WIP -->
 
-### Export
+### 📦 Export
 
 ```bash
 # Create an exports of the notes collection in the current directory.
@@ -136,7 +144,7 @@ $ jin export
 
 > The notes collection is stored in the user's home directory by default.
 
-### Help
+### ❔ Help
 
 ```bash
 # Display general help output.
@@ -159,3 +167,5 @@ $ jin [cmd] --help
 ## License
 
 MIT &copy; [Christopher Murphy](https://github.com/splode)
+
+[⬆](#jin)
