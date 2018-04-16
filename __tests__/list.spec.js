@@ -1,11 +1,11 @@
 const fs = require('fs')
 const execa = require('execa')
 
+beforeAll(() => {
+  execa('bin/jin.js', ['add', 'list-foo', 'bar'])
+})
+
 describe('list actions', () => {
-  beforeAll(() => {
-    execa('bin/jin.js', ['add', 'list-foo', 'bar'])
-  })
-  
   test('list returns a list of notebooks', async () => {
     const result = await execa
       .stdout('bin/jin.js', ['list'])
