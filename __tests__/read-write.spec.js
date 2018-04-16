@@ -1,5 +1,4 @@
 const fs = require('fs')
-const path = require('path')
 const write = require('./../lib/utils/write')
 const read = require('./../lib/utils/read')
 const { dataPath } = require('./../config')

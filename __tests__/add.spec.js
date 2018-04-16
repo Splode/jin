@@ -1,4 +1,3 @@
-const fs = require('fs')
 const _ = require('lodash')
 const execa = require('execa')
 const read = require('./../lib/utils/read')
