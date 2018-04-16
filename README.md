@@ -1,12 +1,16 @@
-![Jin screenshot](https://github.com/Splode/jin/raw/master/.github/jin-ss.png)
+<p align="center">
+    <img src="./.github/jin-icon--color.png" height="150"/>
+</p>
 
 # jin
 
 *A CLI app for taking simple notes without ever leaving the terminal.*
 
+<!-- ![jin screenshot](https://github.com/Splode/jin/raw/master/.github/jin-ss.png) -->
+
 ## Overview
 
-Jin allows you to take and organize simple notes without ever leaving the command line. Capture ideas, track tasks, and reference code snippets with straightforward and intuitive commands.
+jin allows you to take and organize simple notes without ever leaving the command line. Capture ideas, track tasks, and reference code snippets with straightforward and intuitive commands.
 
 ## Table of contents
 
