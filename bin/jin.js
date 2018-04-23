@@ -49,13 +49,14 @@ program
 program
   .command('list [notebook]')
   .alias('ls')
+  .option('-l, --long', 'List detailed information.')
   .description('List the notes for a given notebook. Lists all notebooks.')
-  .action(notebook => {
+  .action((notebook, cmd) => {
     check()
     if (!notebook) {
-      list.listNotebooks()
+      list.listNotebooks(cmd)
     } else {
-      list.listNotes(notebook)
+      list.listNotes(notebook, cmd)
     }
   })
 
