@@ -31,6 +31,7 @@ describe('add actions', () => {
     const notebook = _.find(collection.notebooks, ['name', 'foobar'])
     expect(result).toBe('\n   ✔ Added foo to foobar.\n')
     expect(notebook.notes[0].note).toBe('foo')
+    expect(notebook.modified).not.toBe(notebook.created)
   })
 
   test('adding a note "wizzbang" to a new notebook "fizzle"', async () => {

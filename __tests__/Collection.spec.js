@@ -4,6 +4,7 @@ const note = new Note('foo')
 const emptyNotebook = new Notebook('test-notebook')
 const notebook = new Notebook({
   created: 'date-created',
+  modified: 'date-modified',
   name: 'test-notebook',
   notes: [
     note
@@ -12,7 +13,7 @@ const notebook = new Notebook({
 const emptyCollection = new Collection()
 const collection = new Collection({
   created: 'date-created',
-  modified: 'date-mod',
+  modified: 'date-modified',
   notebooks: [
     notebook
   ]
@@ -22,6 +23,12 @@ const collection = new Collection({
 
 test('note is an instance of Note', () => {
   expect(note).toBeInstanceOf(Note)
+})
+
+test('note has no undefined values', () => {
+  expect(note.created).not.toBeUndefined()
+  expect(note.modified).not.toBeUndefined()
+  expect(note.note).not.toBeUndefined()
 })
 
 test('Note is an object with a value of "foo"', () => {
@@ -37,6 +44,7 @@ test('emptyNotebook is an instance of Notebook', () => {
 
 test('emptyNotebook has no undefined values', () => {
   expect(emptyNotebook.created).not.toBeUndefined()
+  expect(emptyNotebook.modified).not.toBeUndefined()
   expect(emptyNotebook.name).not.toBeUndefined()
   expect(emptyNotebook.notes).not.toBeUndefined()
 })
@@ -49,6 +57,7 @@ test('notebook is an instance of Notebook', () => {
 
 test('notebook has no undefined values', () => {
   expect(notebook.created).not.toBeUndefined()
+  expect(notebook.modified).not.toBeUndefined()
   expect(notebook.name).not.toBeUndefined()
   expect(notebook.notes).not.toBeUndefined()
 })
