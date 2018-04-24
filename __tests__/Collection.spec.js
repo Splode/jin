@@ -1,76 +1,117 @@
 const { Note, Notebook, Collection } = require('./../lib/Collection')
 
-const note = new Note('foo')
-const emptyNotebook = new Notebook('test-notebook')
-const notebook = new Notebook({
+const noteFromString = new Note('foo')
+const noteFromObject = new Note({
+  created: 'dated-created',
+  modified: 'date-modified',
+  note: 'bizbaz'
+})
+
+const notebookFromString = new Notebook('notebook-from-string')
+const notebookFromObject = new Notebook({
   created: 'date-created',
-  name: 'test-notebook',
+  modified: 'date-modified',
+  name: 'notebook-from-object',
   notes: [
-    note
+    noteFromString
   ]
 })
+
 const emptyCollection = new Collection()
 const collection = new Collection({
   created: 'date-created',
-  modified: 'date-mod',
+  modified: 'date-modified',
   notebooks: [
-    notebook
+    notebookFromObject
   ]
 })
 
 // note
 
 test('note is an instance of Note', () => {
-  expect(note).toBeInstanceOf(Note)
+  expect(noteFromString).toBeInstanceOf(Note)
+})
+
+test('note has no undefined values', () => {
+  expect(noteFromString.created).not.toBeUndefined()
+  expect(noteFromString.modified).not.toBeUndefined()
+  expect(noteFromString.note).not.toBeUndefined()
 })
 
 test('Note is an object with a value of "foo"', () => {
-  expect(note.created).not.toBeUndefined()
-  expect(note.note).toBe('foo')
+  expect(noteFromString.created).not.toBeUndefined()
+  expect(noteFromString.note).toBe('foo')
 })
 
-// emptyNotebook
-
-test('emptyNotebook is an instance of Notebook', () => {
-  expect(emptyNotebook).toBeInstanceOf(Notebook)
+test('note from object is an instance of Note', () => {
+  expect(noteFromObject).toBeInstanceOf(Note)
 })
 
-test('emptyNotebook has no undefined values', () => {
-  expect(emptyNotebook.created).not.toBeUndefined()
-  expect(emptyNotebook.name).not.toBeUndefined()
-  expect(emptyNotebook.notes).not.toBeUndefined()
+test('note from object has no undefined values', () => {
+  expect(noteFromObject.created).not.toBeUndefined()
+  expect(noteFromObject.modified).not.toBeUndefined()
+  expect(noteFromObject.note).not.toBeUndefined()
 })
 
-// notebook
-
-test('notebook is an instance of Notebook', () => {
-  expect(notebook).toBeInstanceOf(Notebook)
+test('note from object is an object with a value of "bizbaz"', () => {
+  expect(noteFromObject.created).not.toBeUndefined()
+  expect(noteFromObject.note).toBe('bizbaz')
 })
 
-test('notebook has no undefined values', () => {
-  expect(notebook.created).not.toBeUndefined()
-  expect(notebook.name).not.toBeUndefined()
-  expect(notebook.notes).not.toBeUndefined()
+test('set note contents to "fizzbang"', () => {
+  noteFromObject.setNote('fizzbang')
+  expect(noteFromObject.note).toBe('fizzbang')
 })
 
-test('notebook contains a note', () => {
-  expect(notebook.notes[0]).toMatchObject(note)
+// notebookFromString
+
+test('notebookFromString is an instance of Notebook', () => {
+  expect(notebookFromString).toBeInstanceOf(Notebook)
 })
 
-test('get note from notebook by index', () => {
-  expect(notebook.getNote(0)).toMatchObject(note)
+test('notebookFromString has no undefined values', () => {
+  expect(notebookFromString.created).not.toBeUndefined()
+  expect(notebookFromString.modified).not.toBeUndefined()
+  expect(notebookFromString.name).not.toBeUndefined()
+  expect(notebookFromString.notes).not.toBeUndefined()
 })
 
-test('replace note in notebook at index', () => {
-  notebook.setNote(new Note('bar'), 0)
-  const updatedNote = notebook.notes[0]
+// notebookFromObject
+
+test('notebookFromObject is an instance of Notebook', () => {
+  expect(notebookFromObject).toBeInstanceOf(Notebook)
+})
+
+test('notebookFromObject has no undefined values', () => {
+  expect(notebookFromObject.created).not.toBeUndefined()
+  expect(notebookFromObject.modified).not.toBeUndefined()
+  expect(notebookFromObject.name).not.toBeUndefined()
+  expect(notebookFromObject.notes).not.toBeUndefined()
+})
+
+test('notebookFromObject contains a note', () => {
+  expect(notebookFromObject.notes[0]).toMatchObject(noteFromString)
+})
+
+test('get note from notebookFromObject by index', () => {
+  expect(notebookFromObject.getNote(0)).toMatchObject(noteFromString)
+})
+
+test('add a new note to notebookFromObject', () => {
+  notebookFromObject.addNote(notebookFromObject)
+  expect(notebookFromObject.notes.length).toBeGreaterThan(1)
+})
+
+test('replace note in notebookFromObject at index', () => {
+  notebookFromObject.setNote(new Note('bar'), 0)
+  const updatedNote = notebookFromObject.notes[0]
   expect(updatedNote).toBeInstanceOf(Note)
   expect(updatedNote.note).toBe('bar')
 })
 
-test('remove note from notebook at index', () => {
-  notebook.destroyNote(0)
-  expect(notebook.notes.length).toBe(0)
+test('remove note from notebookFromObject at index', () => {
+  notebookFromObject.destroyNote(0)
+  expect(notebookFromObject.notes.length).toBe(1)
 })
 
 // emptyCollection
@@ -98,15 +139,29 @@ test('collection has no undefined values', () => {
 })
 
 test('collection contains a notebook', () => {
-  expect(collection.notebooks[0]).toMatchObject(notebook)
+  expect(collection.notebooks[0]).toMatchObject(notebookFromObject)
 })
 
 test('get notebook from collection by name', () => {
-  expect(collection.getNotebook('test-notebook')).toBeInstanceOf(Notebook)
+  expect(collection.getNotebook('notebook-from-object')).toBeInstanceOf(Notebook)
 })
 
 test('get notebook index from collection by name', () => {
-  expect(collection.getNotebookIndex('test-notebook')).toBe(0)
+  expect(collection.getNotebookIndex('notebook-from-object')).toBe(0)
+})
+
+test('add a new notebook to the collection', () => {
+  const notebook = new Notebook('bamboozle')
+  collection.addNotebook(notebook)
+  expect(collection.getNotebookIndex(notebook.name)).not.toBeFalsy()
+})
+
+test('replace a new notebook in the collection', () => {
+  const oldNotebookName = 'bamboozle'
+  const notebook = new Notebook('hornswaggle')
+  collection.setNotebook(collection.getNotebookIndex(oldNotebookName), notebook)
+  expect(collection.getNotebookIndex(notebook.name)).not.toBe(-1)
+  expect(collection.getNotebookIndex(oldNotebookName)).toBe(-1)
 })
 
 test('update modified property of collection', () => {
@@ -116,5 +171,5 @@ test('update modified property of collection', () => {
 
 test('remove notebook from collection by index', () => {
   collection.destroyNotebook(0)
-  expect(collection.notebooks).toHaveLength(0)
+  expect(collection.getNotebookIndex('notebook-from-object')).toBe(-1)
 })
