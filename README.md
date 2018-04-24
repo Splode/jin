@@ -69,16 +69,18 @@ $ jin add nodejs "Use 'util.promisify()' to promisify a callback-style function.
 
 ```bash
 # List all notes in the given notebook.
+# Pass the --long|-l option to get detailed information.
 
-$ jin list [notebook]
-# jin ls [notebook]
+$ jin list [options] [notebook]
+# jin ls [options] [notebook]
 ```
 
 ```bash
 # List all notebooks.
+# Pass the --long|-l option to get detailed information.
 
-$ jin list
-# jin ls
+$ jin list [options]
+# jin ls [options]
 ```
 
 #### Example
@@ -172,4 +174,4 @@ $ jin [cmd] --help
 
 MIT &copy; [Christopher Murphy](https://github.com/splode)
 
-[⬆](#jin)
+[⬆ **Back to Top**](#jin)
