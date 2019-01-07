@@ -18,17 +18,17 @@
   "author": "Christopher Murphy",
   "license": "MIT",
   "dependencies": {
-    "chalk": "^2.4.1",
-    "commander": "^2.15.1",
-    "lodash": "^4.17.10",
-    "moment": "^2.22.1",
+    "chalk": "^2.4.2",
+    "commander": "^2.19.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.23.0",
     "prompts": "^0.1.8"
   },
   "devDependencies": {
-    "cross-env": "^5.1.4",
+    "cross-env": "^5.2.0",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.1.0",
